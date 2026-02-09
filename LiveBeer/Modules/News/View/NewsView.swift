@@ -24,10 +24,10 @@ struct NewsView: View {
                     
                     VStack(alignment: .leading, spacing: 0) {
                         Text("Информация")
-                            .font(.system(size: 36, weight: .semibold))
+                            .font(.system(size: AppLayouts.s36, weight: .semibold))
                             .foregroundColor(.black)
-                            .padding(.top, 24)
-                            .padding(.horizontal, 24)
+                            .padding(.top, AppLayouts.s24)
+                            .padding(.horizontal, AppLayouts.s24)
                         
                         Picker("Title", selection: $currentSegment) {
                             ForEach(newsType.indices, id: \.self) { index in
@@ -35,13 +35,13 @@ struct NewsView: View {
                                     .tag(index)
                             }
                         }
-                        .padding(.top, 24)
-                        .padding(.bottom, 20)
-                        .padding(.horizontal, 24)
+                        .padding(.top, AppLayouts.s24)
+                        .padding(.bottom, AppLayouts.s20)
+                        .padding(.horizontal, AppLayouts.s24)
                         .pickerStyle(.segmented)
                         
                         ScrollView {
-                            VStack(spacing: 8) {
+                            VStack(spacing: AppLayouts.s8) {
                                 ForEach(filteredNews, id: \.self) { news in
                                     LargeNewsCard(title: news.title, date: news.date, image: news.image) {
                                         isSheetPresented = true
@@ -55,7 +55,7 @@ struct NewsView: View {
                                             description: news.description
                                         )
                                     }
-                                    .padding(.horizontal, 24)
+                                    .padding(.horizontal, AppLayouts.s24)
                                 }
                             }
                         }

@@ -11,7 +11,7 @@ struct TextField: UIViewRepresentable {
         let textField = UITextField()
         
         textField.placeholder = self.placeholder
-        textField.font = UIFont.systemFont(ofSize: 17)
+        textField.font = UIFont.systemFont(ofSize: AppLayouts.s17)
         textField.textColor = isEnabled ? UIColor.black : UIColor.enabledBorder
         textField.backgroundColor = isEnabled ? UIColor.white : UIColor.enabledBorder
         textField.keyboardType = keyboardType
@@ -20,11 +20,11 @@ struct TextField: UIViewRepresentable {
         textField.returnKeyType = .done
         textField.isEnabled = isEnabled
         
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: textField.frame.height))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: AppLayouts.s16, height: textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = .always
         
-        textField.layer.cornerRadius = 8
+        textField.layer.cornerRadius = AppLayouts.s8
         textField.layer.masksToBounds = true
         textField.layer.borderWidth = 1
         textField.layer.borderColor = isEnabled ? UIColor.enabledBorder.cgColor : UIColor.clear.cgColor
@@ -102,9 +102,9 @@ struct InputField: View {
     var isEnabled: Bool = true
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: AppLayouts.s8) {
             Text(title)
-                .font(.system(size: 14))
+                .font(.system(size: AppLayouts.s14))
                 .foregroundColor(.gray)
             
             TextField(

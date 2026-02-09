@@ -7,12 +7,12 @@ struct LargeButton: View {
     var body: some View {
         ZStack {
             Text(label)
-                .font(.system(size: 16, weight: .semibold))
+                .font(.system(size: AppLayouts.s16, weight: .semibold))
         }
         .frame(height: 56)
         .frame(maxWidth: .infinity)
         .background(.buttonYellow)
-        .cornerRadius(10)
+        .cornerRadius(AppLayouts.radius)
         .contentShape(Rectangle())
         .onTapGesture {
             onTap?()

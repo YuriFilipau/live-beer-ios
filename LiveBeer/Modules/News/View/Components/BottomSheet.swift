@@ -15,38 +15,38 @@ struct BottomSheet: View {
                     Image(.back)
                         .foregroundStyle(.blue)
                     Text("Назад")
-                        .font(.system(size: 17))
+                        .font(.system(size: AppLayouts.s17))
                         .foregroundStyle(.blue)
                 }
                 .onTapGesture {
                     dismiss()
                 }
-                .padding(.vertical, 32)
+                .padding(.vertical, AppLayouts.s32)
                 
                 Text(title)
-                    .font(.system(size: 32, weight: .semibold))
+                    .font(.system(size: AppLayouts.s32, weight: .semibold))
                     .lineSpacing(2)
-                    .padding(.bottom, 8)
-                HStack(spacing: 8) {
+                    .padding(.bottom, AppLayouts.s8)
+                HStack(spacing: AppLayouts.s8) {
                     ZStack{
                         HStack(spacing: 3) {
                             Image(type == NewsType.news ? .mic : .discountSmall)
                             Text(type == NewsType.news ? "Новости" : "Акция")
-                                .font(.system(size: 12, weight: .semibold))
+                                .font(.system(size: AppLayouts.s12, weight: .semibold))
                         }
                     }
-                    .padding(.horizontal, 8)
+                    .padding(.horizontal, AppLayouts.s8)
                     .padding(.vertical, 5)
                     .background(.buttonYellow)
                     .cornerRadius(4)
                     ZStack{
                         Text(date)
-                            .font(.system(size: 12, weight: .semibold))
+                            .font(.system(size: AppLayouts.s12, weight: .semibold))
                     }
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 6)
+                    .padding(.horizontal, AppLayouts.s8)
+                    .padding(.vertical, AppLayouts.s6)
                     .background(.buttonYellow)
-                    .cornerRadius(4)
+                    .cornerRadius(AppLayouts.s4)
                 }
                 Image(largeImage)
                     .resizable()
@@ -54,15 +54,15 @@ struct BottomSheet: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 196)
                     .clipped()
-                    .cornerRadius(10)
-                    .padding(.vertical, 16)
+                    .cornerRadius(AppLayouts.radius)
+                    .padding(.vertical, AppLayouts.s16)
                 Text(description)
-                    .font(.system(size: 15))
+                    .font(.system(size: AppLayouts.s15))
                     .lineSpacing(5)
                 Spacer()
             }
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, AppLayouts.s24)
         .scrollIndicators(.hidden)
     }
 }

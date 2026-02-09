@@ -19,7 +19,7 @@ struct BarcodeCard: View {
                         .buttonYellow.opacity(0.85)
                     )
                 Text ("Привет, \(userName)!")
-                    .font(.system(size: 24, weight: .semibold))
+                    .font(.system(size: AppLayouts.s24, weight: .semibold))
                 
             }
             Spacer()
@@ -29,15 +29,15 @@ struct BarcodeCard: View {
                     .interpolation(.none)
                     .frame(height: 45)
                 Text(barcodeName)
-                    .tracking(11)
+                    .tracking(AppLayouts.s11)
                     .frame(maxWidth: .infinity)
-                    .font(.system(size: 15))
+                    .font(.system(size: AppLayouts.s15))
             }.padding(.horizontal, 23)
             Spacer()
         }
         .frame(height: 166, alignment: .topLeading)
         .background(.white)
-        .cornerRadius(10)
+        .cornerRadius(AppLayouts.radius)
         .clipped()
     }
     
@@ -54,13 +54,13 @@ struct BarcodeCard: View {
         
         if let output = filter.outputImage {
             let transformed = output.transformed(
-                by: CGAffineTransform(scaleX: 50, y: 10)
+                by: CGAffineTransform(scaleX: 50, y: AppLayouts.s10)
             )
             
             let context = CIContext()
             if let cgImage = context.createCGImage(
                 transformed,
-                from: transformed.extent.insetBy(dx: 10, dy: 0)
+                from: transformed.extent.insetBy(dx: AppLayouts.s10, dy: 0)
             ) {
                 return UIImage(cgImage: cgImage)
             }

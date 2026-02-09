@@ -12,11 +12,11 @@ struct LargeNewsCard: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 64, height: 64)
                 .clipped()
-                .cornerRadius(8)
+                .cornerRadius(AppLayouts.s8)
             
             VStack(alignment: .leading) {
                 Text(title)
-                    .font(.system(size: 16, weight: .semibold))
+                    .font(.system(size: AppLayouts.s16, weight: .semibold))
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
                     .lineSpacing(4)
@@ -26,16 +26,16 @@ struct LargeNewsCard: View {
                 Spacer()
                 
                 Text(date)
-                    .font(.system(size: 12, weight: .regular))
+                    .font(.system(size: AppLayouts.s12, weight: .regular))
                     .foregroundColor(.black)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(16)
+        .padding(AppLayouts.s16)
         .frame(maxWidth: .infinity)
         .frame(height: 96)
         .background(.buttonYellow)
-        .cornerRadius(10)
+        .cornerRadius(AppLayouts.s10)
         .onTapGesture {
             onTap()
         }

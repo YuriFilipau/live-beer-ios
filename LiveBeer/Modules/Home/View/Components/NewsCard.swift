@@ -10,7 +10,7 @@ struct NewsCard: View {
             ZStack(alignment: .topLeading) {
                 VStack(alignment: .leading, spacing: 0) {
                     Text(title)
-                        .font(.system(size: 14, weight: .semibold))
+                        .font(.system(size: AppLayouts.s14, weight: .semibold))
                         .lineSpacing(4.6)
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
@@ -19,23 +19,23 @@ struct NewsCard: View {
                     Spacer()
                     
                     Text(date)
-                        .font(.system(size: 12, weight: .regular))
+                        .font(.system(size: AppLayouts.s12, weight: .regular))
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .padding(16)
+                .padding(AppLayouts.s16)
                 .frame(width: geometry.size.width, height: geometry.size.height)
                 
             
                 Image(type == NewsType.discount ? .discount : .news)
                     .position(
-                        x: geometry.size.width - 20,
-                        y: geometry.size.height - 20
+                        x: geometry.size.width - AppLayouts.s20,
+                        y: geometry.size.height - AppLayouts.s20
                     )
             }
         }
         .frame(width: 132, height: 138)
         .background(.buttonYellow)
-        .cornerRadius(10)
+        .cornerRadius(AppLayouts.radius)
         .clipped()
     }
 }

@@ -10,13 +10,13 @@ struct BeerRewardCard: View {
             
             Spacer()
             
-            HStack(spacing: 16) {
+            HStack(spacing: AppLayouts.s16) {
                 VStack(alignment: .leading) {
                     Text("\(filledLiters)/\(totalLiters)")
-                        .font(.system(size: 32, weight: .heavy))
+                        .font(.system(size: AppLayouts.s32, weight: .heavy))
                         .foregroundColor(.white)
                     Text("Накоплено литров")
-                        .font(.system(size: 16, weight: .semibold))
+                        .font(.system(size: AppLayouts.s16, weight: .semibold))
                         .foregroundColor(.white)
                 }
                 
@@ -25,7 +25,7 @@ struct BeerRewardCard: View {
                     .background(.white.opacity(0.1))
                 
                 Text("Копите литры \nи получайте пиво \nбесплатно")
-                    .font(.system(size: 14, weight: .regular))
+                    .font(.system(size: AppLayouts.s14, weight: .regular))
                     .lineSpacing(1)
                     .foregroundColor(.white.opacity(0.7))
                 
@@ -33,9 +33,9 @@ struct BeerRewardCard: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .frame(height: 120, alignment: .topLeading)
-        .padding(16)
+        .padding(AppLayouts.s16)
         .background(.black)
-        .cornerRadius(10)
+        .cornerRadius(AppLayouts.radius)
         .clipped()
     }
 }

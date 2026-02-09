@@ -22,12 +22,12 @@ struct ProfileView: View {
                         
                         VStack(alignment: .leading, spacing: 0) {
                             Text("Профиль")
-                                .font(.system(size: 36, weight: .semibold))
+                                .font(.system(size: AppLayouts.s36, weight: .semibold))
                                 .foregroundColor(.black)
-                                .padding(.top, 24)
-                                .padding(.horizontal, 24)
+                                .padding(.top, AppLayouts.s24)
+                                .padding(.horizontal, AppLayouts.s24)
                             ScrollView {
-                                VStack(alignment: .leading, spacing: 8, ) {
+                                VStack(alignment: .leading, spacing: AppLayouts.s8) {
                                     InputField(
                                         title: "Ваше имя",
                                         placeholder: "Введите ваше имя",
@@ -53,15 +53,15 @@ struct ProfileView: View {
                                     Text("Если вы хотите изменить номер телефона, то обратитесь в нашу [тех.поддержку](https://example.com)")
                                         .foregroundColor(.gray)
                                         .tint(.blue)
-                                        .font(.system(size: 14))
+                                        .font(.system(size: AppLayouts.s14))
                                         .lineLimit(2)
-                                        .padding(.bottom, 24)
+                                        .padding(.bottom, AppLayouts.s24)
                                     VStack {
                                         Rectangle()
                                             .foregroundColor(.enabledBorder)
                                             .frame(maxWidth: .infinity)
-                                            .frame(height: 8)
-                                            .padding(.bottom, 24)
+                                            .frame(height: AppLayouts.s8)
+                                            .padding(.bottom, AppLayouts.s24)
                                         HStack {
                                             Text("Смс-уведомления")
                                             Toggle(isOn: $isOn) {
@@ -73,13 +73,13 @@ struct ProfileView: View {
                                             .frame(height: 1)
                                             .frame(maxWidth: .infinity)
                                             .foregroundColor(.enabledBorder)
-                                            .padding(.bottom, 8)
+                                            .padding(.bottom, AppLayouts.s8)
                                         HStack {
                                             Text("Выйти из аккаунта")
                                             Spacer()
                                             Image(.logOut)
-                                                .frame(width: 24, height: 24)
-                                                .padding(.trailing, 10)
+                                                .frame(width: AppLayouts.s24, height: AppLayouts.s24)
+                                                .padding(.trailing, AppLayouts.radius)
                                         }
                                         Divider()
                                             .frame(height: 1)
@@ -87,25 +87,25 @@ struct ProfileView: View {
                                             .foregroundColor(.enabledBorder)
                                     }
                                 }
-                                .padding(.top, 16)
-                                .padding(.horizontal, 24)
+                                .padding(.top, AppLayouts.s16)
+                                .padding(.horizontal, AppLayouts.s24)
                                 
                             }
                             Spacer()
-                            VStack (spacing: 8) {
+                            VStack (spacing: AppLayouts.s8) {
                                 LargeButton(label: "Сохранить") {
                                     print("fdsdf")
                                 }
                                 Text("Версия приложения 1.0.7")
-                                    .font(.system(size: 14))
+                                    .font(.system(size: AppLayouts.s14))
                                     .foregroundColor(.gray)
                             }
-                            .padding(.horizontal, 24)
+                            .padding(.horizontal, AppLayouts.s24)
                             .padding(.bottom, 28)
                         }
                     }
                 }
-                .blur(radius: isDatePickerActive ? 15 : 0)
+                .blur(radius: isDatePickerActive ? AppLayouts.s15 : 0)
                 .animation(.easeInOut(duration: 0.1), value: isDatePickerActive)
                 .allowsHitTesting(!isDatePickerActive)
                 

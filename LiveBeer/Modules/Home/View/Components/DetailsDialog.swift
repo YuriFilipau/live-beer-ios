@@ -9,40 +9,40 @@ struct DetailsDialog: View {
                 Spacer()
                 VStack(alignment: .leading) {
                     Text("Правила накопления баллов и литров")
-                        .font(.system(size: 24))
+                        .font(.system(size: AppLayouts.s24))
                         .lineSpacing(9)
                         .lineLimit(2)
-                        .padding(.bottom, 14)
+                        .padding(.bottom, AppLayouts.s14)
                     Text("1 балл = 1 рубль")
-                        .font(.system(size: 16, weight: .bold))
-                        .padding(.bottom, 6)
+                        .font(.system(size: AppLayouts.s16, weight: .bold))
+                        .padding(.bottom, AppLayouts.s6)
                     Text("Посещайте магазины сети LiveBeer и получайте процент накоплений от суммы покупки. \nОбязательно предъявите карту, до начала оплаты.")
                         .lineSpacing(9)
                 }
-                .padding(24)
+                .padding(AppLayouts.s24)
                 .frame(maxWidth: .infinity)
                 .frame(height: 304)
                 .background(.white)
-                .cornerRadius(10)
+                .cornerRadius(AppLayouts.radius)
                 .clipped()
                 .overlay(
                     GeometryReader { geometry in
                         Image(.details)
                             .position(
-                                x: geometry.size.width + 2,
+                                x: geometry.size.width + AppLayouts.s2,
                                 y: 0
                             )
                     }
                 )
-                .padding(.horizontal, 24)
+                .padding(.horizontal, AppLayouts.s24)
                 
                 Spacer()
                 
                 LargeButton(label: "Закрыть") {
                     isActive = false
                 }
-                .padding(.horizontal, 16)
-                .padding(.bottom, 16)
+                .padding(.horizontal, AppLayouts.s16)
+                .padding(.bottom, AppLayouts.s16)
             }
         }
     }

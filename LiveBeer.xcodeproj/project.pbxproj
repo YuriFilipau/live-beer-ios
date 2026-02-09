@@ -24,9 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D20363992F3651D20020BA7A /* LiveBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D20363A62F3651D40020BA7A /* LiveBeerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveBeerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D20363B02F3651D40020BA7A /* LiveBeerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveBeerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20363992F3651D20020BA7A /* LiveBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = LiveBeer.app; path = "/Users/yury/Development/swift_projects/LiveBeer/build/Debug-iphoneos/LiveBeer.app"; sourceTree = "<absolute>"; };
+		D20363A62F3651D40020BA7A /* LiveBeerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LiveBeerTests.xctest; path = "/Users/yury/Development/swift_projects/LiveBeer/build/Debug-iphoneos/LiveBeer.app/PlugIns/LiveBeerTests.xctest"; sourceTree = "<absolute>"; };
+		D20363B02F3651D40020BA7A /* LiveBeerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LiveBeerUITests.xctest; path = "/Users/yury/Development/swift_projects/LiveBeer/build/Debug-iphoneos/LiveBeerUITests-Runner.app/PlugIns/LiveBeerUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -78,18 +78,7 @@
 				D203639B2F3651D20020BA7A /* LiveBeer */,
 				D20363A92F3651D40020BA7A /* LiveBeerTests */,
 				D20363B32F3651D40020BA7A /* LiveBeerUITests */,
-				D203639A2F3651D20020BA7A /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		D203639A2F3651D20020BA7A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D20363992F3651D20020BA7A /* LiveBeer.app */,
-				D20363A62F3651D40020BA7A /* LiveBeerTests.xctest */,
-				D20363B02F3651D40020BA7A /* LiveBeerUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +186,7 @@
 			mainGroup = D20363902F3651D20020BA7A;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = D203639A2F3651D20020BA7A /* Products */;
+			productRefGroup = D20363902F3651D20020BA7A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

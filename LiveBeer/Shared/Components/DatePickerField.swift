@@ -39,11 +39,11 @@ struct DatePickerTextField: UIViewRepresentable {
         )
         
         textField.placeholder = self.placeholder
-        textField.font = UIFont.systemFont(ofSize: 17)
+        textField.font = UIFont.systemFont(ofSize: AppLayouts.s17)
         textField.textColor = UIColor.black
         textField.backgroundColor = UIColor.white
         
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: textField.frame.height))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: AppLayouts.s16, height: textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = .always
         
@@ -59,7 +59,7 @@ struct DatePickerTextField: UIViewRepresentable {
         toolbar.barTintColor = .white
         toolbar.backgroundColor = .white
         
-        toolbar.layer.cornerRadius = 10
+        toolbar.layer.cornerRadius = AppLayouts.radius
         toolbar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         toolbar.layer.masksToBounds = true
         
@@ -80,7 +80,7 @@ struct DatePickerTextField: UIViewRepresentable {
         let titleLabel = UILabel()
         titleLabel.text = "Выберите дату"
         titleLabel.textColor = .black
-        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        titleLabel.font = UIFont.systemFont(ofSize: AppLayouts.s16, weight: .medium)
         titleLabel.sizeToFit()
         let titleButton = UIBarButtonItem(customView: titleLabel)
         
@@ -164,9 +164,9 @@ struct DatePickerInputField: View {
     @Binding var isDatePickerActive: Bool
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: AppLayouts.s8) {
             Text(title)
-                .font(.system(size: 14))
+                .font(.system(size: AppLayouts.s14))
                 .foregroundColor(.gray)
             
             DatePickerTextField(
