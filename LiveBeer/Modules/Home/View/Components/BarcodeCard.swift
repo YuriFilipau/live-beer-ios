@@ -31,6 +31,7 @@ struct BarcodeCard: View {
                 Text(barcodeName)
                     .tracking(11)
                     .frame(maxWidth: .infinity)
+                    .font(.system(size: 15))
             }.padding(.horizontal, 23)
             Spacer()
         }
