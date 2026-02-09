@@ -22,8 +22,7 @@ struct NewsCard: View {
                         .font(.system(size: 12, weight: .regular))
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .padding(.vertical, 16)
-                .padding(.horizontal, 16)
+                .padding(16)
                 .frame(width: geometry.size.width, height: geometry.size.height)
                 
             
